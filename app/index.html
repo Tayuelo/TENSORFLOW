@@ -1,0 +1,43 @@
+<!doctype html>
+
+<head>
+  <link rel="stylesheet" href="./css/tfjs-examples.scss" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="tfjs-example-container centered-container">
+    <section class='title-area'>
+      <h1> Detección de objetos </h1>
+      <p class='subtitle'>Clasificacion y localizacion de 🔵🔺⬛</p>
+    </section>
+
+    <p class='section-head'>Ejercicio</p>
+    <div>
+      <canvas id="data-canvas" width="224" height="224"></canvas>
+    </div>
+
+    <div>
+      <div style="display: none" >
+        <span>Tiempo de inferencia (ms):</span>
+        <span id="inference-time-ms"></span>
+      </div>
+      <div>
+        <span>Clase de objeto verdadero:</span>
+        <span class="shape-class" id="true-object-class"></span>
+      </div>
+      <div>
+        <span>Clase de objeto predicho:</span>
+        <span class="shape-class" id="predicted-object-class"></span>
+      </div>
+    </div>
+    
+    <button id="load-hosted-model" hidden style="width: 200px" disabled="true">Load Hosted model</button>
+    <button id="test" style="width: 200px" disabled="true">Test model</button>
+    <div id="status">Loading model...</div>
+
+    <img style="display: none" id="cat" src="./images/cat.jpg" width="224" height="224" />
+  </div>
+</body>
+
+<script src="index.js"></script>
